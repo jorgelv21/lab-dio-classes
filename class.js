@@ -1,16 +1,19 @@
-let heroi = {
-  nome: "Jorge",
-  idade: 30,
-  tipo: "ninja",
-};
+class herois {
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
+}
 
-let classe = ["mago", "guerreiro", "monge", "ninja"];
-let ataque = ["magia", "espada", "artes marciais", "shuriken"];
+let heroi = new herois("Jorge,", 30, "mago");
 
 function atacar() {
-  for (let i = 0; (i < classe.length); i++) {
+  let classe = ["mago", "guerreiro", "monge", "ninja"];
+  let ataque = ["magia", "espada", "artes marciais", "shuriken"];
+  for (let i = 0; i < classe.length; i++) {
     if (heroi.tipo === classe[i]) {
-      console.log(`O ${heroi.tipo} atacou usando ${ataque[i]}`);
+      console.log(`O ${heroi.nome} atacou usando ${ataque[i]}`);
     }
   }
 }
